@@ -1,0 +1,18 @@
+--Q1) Using a subquery, find the names of all the tracks for the album "Californication".
+
+SELECT Name, T.AlbumId, T.TrackId
+FROM Tracks T
+WHERE T.AlbumId IN (SELECT AlbumId 
+     FROM Albums A
+     WHERE A.Title = 'Californication');
+      
+-------------------------------------------------------------------------------------------------------------------
+--Q2) Find the total number of invoices for each customer along with the customer's full name, city and email.
+
+SELECT C.CustomerId, FirstName, LastName, City, Email, COUNT(InvoiceId) AS Totalnum_invoice
+From Customers C
+LEFT JOIN Invoices I 
+ON C.CustomerId = I.CustomerId
+Group BY C.CustomerId
+
+-------------------------------------------------------------------------------------------------------------------
