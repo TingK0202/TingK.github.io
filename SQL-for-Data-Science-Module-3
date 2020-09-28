@@ -9,7 +9,7 @@ WHERE T.AlbumId IN (SELECT AlbumId
 -------------------------------------------------------------------------------------------------------------------
 --Q2) Find the total number of invoices for each customer along with the customer's full name, city and email.
 
-SELECT C.CustomerId, FirstName, LastName, City, Email, COUNT(InvoiceId) AS Totalnum_invoice
+```SELECT``` C.CustomerId, FirstName, LastName, City, Email, COUNT(InvoiceId) AS Totalnum_invoice
 From Customers C
 LEFT JOIN Invoices I 
 ON C.CustomerId = I.CustomerId
