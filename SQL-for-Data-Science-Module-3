@@ -37,7 +37,7 @@ WHERE E1.EmployeeId = E2.ReportsTo
 SELECT Name, A1.ArtistId
 FROM Artists A1
 LEFT JOIN Albums A2 ON A1.ArtistId = A2.ArtistId
-WHERE AlbumId is null
+WHERE AlbumId IS NULL
 
 -------------------------------------------------------------------------------------------------------------------
 --Q6) Use a UNION to create a list of all the employee's and customer's first names and last names ordered by the last name in descending order.
